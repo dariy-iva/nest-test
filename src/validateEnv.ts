@@ -1,5 +1,5 @@
 import { plainToInstance, Type } from 'class-transformer';
-import { IsInt, Max, Min, IsIn, validateSync } from 'class-validator';
+import { IsInt, Max, Min, IsIn, IsString, IsNotEmpty, validateSync } from 'class-validator';
 
 class EnvConfig {
     @Type(() => Number)
@@ -10,6 +10,10 @@ class EnvConfig {
 
     @IsIn(['development', 'test', 'production'])
     NODE_ENV!: 'development' | 'test' | 'production';
+
+    @IsString()
+    @IsNotEmpty()
+    DATABASE_URL!: string;
 }
 
 export function validateEnv(raw: Record<string, unknown>) {

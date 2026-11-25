@@ -14,7 +14,7 @@ Task Manager / мини-Trello: пользователи, проекты, бор
 - [x] Nest CLI, модули, контроллеры, сервисы, DI
 - [x] Config Module (`.env`)
 - [x] Валидация конфига через `class-validator`
-- [ ] Подключение БД (Prisma)
+- [x] Подключение БД (Prisma)
 
 ### Фаза 2 — CRUD и валидация
 - [ ] Модули: `users`, `projects`, `tasks`
